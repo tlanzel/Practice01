@@ -1,2 +1,2 @@
 # Practice01
-Homework 03
+tips to working with git and github
