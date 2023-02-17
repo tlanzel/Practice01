@@ -1,6 +1,7 @@
+<<<<<<< HEAD
 ---
 title: "practice-01"
-author: "Tessa Lanzel and James Waskow"
+author: "Tessa Lanzel"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -24,4 +25,7 @@ library(ggplot2)
 X = ggplot(A1, aes(x = (lifeExp), y = (gdpPercap))) + geom_point() 
 X + ggtitle("United States lifeExp vs. gdpPercap")
 ```
+
+```{r}
+
 
