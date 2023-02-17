@@ -25,6 +25,19 @@ X2 = ggplot(B1, aes(x = (lifeExp), y = (gdpPercap))) + geom_point()
 X2 + ggtitle("Australian lifeExp vs. gdpPercap")
 ```
 ```{r}
+A = gminder1[,c("country","lifeExp","gdpPercap")]
+A2 = A[A$country == "Canada",]
+A2[2,2] = 69
+View(A2)
+```
+
+```{r}
+library(ggplot2)
+XC = ggplot(A2, aes(x = (lifeExp), y = (gdpPercap))) + geom_point() 
+XC + ggtitle("Canadian lifeExp vs. gdpPercap")
+```
+
+```{r}
 B2 = B[B$country == "United States",]
 View(B2)
 ```
