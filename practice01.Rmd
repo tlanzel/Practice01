@@ -25,3 +25,19 @@ X = ggplot(A1, aes(x = (lifeExp), y = (gdpPercap))) + geom_point()
 X + ggtitle("United States lifeExp vs. gdpPercap")
 ```
 
+```{r}
+gminder1 <- read.csv(file = 'E:\\gapminder-5060.csv')
+head(gminder1)
+```
+```{r}
+A = gminder1[,c("country","lifeExp","gdpPercap")]
+A2 = A[A$country == "Canada",]
+A2[2,2] = 69
+View(A2)
+```
+
+```{r}
+library(ggplot2)
+XC = ggplot(A2, aes(x = (lifeExp), y = (gdpPercap))) + geom_point() 
+XC + ggtitle("Canadian lifeExp vs. gdpPercap")
+```
