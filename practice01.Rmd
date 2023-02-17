@@ -1,0 +1,37 @@
+---
+title: "practice01"
+author: "Tessa"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+gminder2 <- read.csv(file = 'C:\\Users\\tessa\\Downloads\\gapminder-5060.csv')
+head(gminder2)
+```
+```{r}
+B = gminder2[,c("country","lifeExp","gdpPercap")]
+B1 = B[B$country == "Australia",]
+View(B1)
+```
+
+```{r}
+library(ggplot2)
+X2 = ggplot(B1, aes(x = (lifeExp), y = (gdpPercap))) + geom_point() 
+X2 + ggtitle("Australian lifeExp vs. gdpPercap")
+```
+```{r}
+B2 = B[B$country == "United States",]
+View(B2)
+```
+
+```{r}
+library(ggplot2)
+X3 = ggplot(B2, aes(x = (lifeExp), y = (gdpPercap))) + geom_point() 
+X3 + ggtitle("United States lifeExp vs. gdpPercap")
+```
+
